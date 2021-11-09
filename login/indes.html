@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="site-logo.PNG" alt="">
+        </div>
+        
+        <ul class="navbar">
+            <li><a href="">About</a></li>
+            <li><a href="">Career</a></li>
+            <li><a href="">Hobbies</a></li>
+            <li><a href="">Education</a></li>
+        </ul>
+    </header>
+
+   <form onsubmit="return validate()" class="form-container">
+    
+        <p id="error"></p>
+        <h2>Login</h2>
+            <div class="form-grp">
+                <label>Username</label>
+                <input type="text" name="username" id="user">
+                <p id="uerror"></p>
+                <i class=" fa fa-check u_check"></i>
+                <i class=" fa fa-times u_times"></i>
+            </div>
+            <div class="form-grp">
+                <label>Password</label>
+                <input type="password" name="password" id="pass">
+                <p id="perror"></p>
+                <i class=" fa fa-check p_check"></i>
+                <i class=" fa fa-times p_times"></i>
+            </div>
+            <div class="form-grp">
+                <input type="submit">
+            </div>
+    
+   </form> 
+   <script type="text/javascript">
+        const user = document.querySelector('#user')
+        const check = document.querySelector('.u_check')
+        const times = document.querySelector('.u_times')
+        const uerror = document.querySelector('#uerror')
+        const perror = document.querySelector('#perror')
+        user.addEventListener('keyup', () => {
+            if(user.value.length == 0 || user.value.length < 6 ){
+                user.style.border = "2px solid red";
+                times.style.display = "block";
+                check.style.display = "none";
+                return false;
+            }
+            else{
+                user.style.border = "2px solid green";
+                times.style.display = "none";
+                check.style.display = "block";
+            }
+            
+        });
+
+        const pass = document.querySelector('#pass')
+
+        const p_check = document.querySelector('.p_check')
+        const p_times = document.querySelector('.p_times')
+        pass.addEventListener('keyup', toggle = () => {
+            if (pass.value.length == 0 || pass.value.length < 8) {
+                pass.style.border = "2px solid red";
+                p_times.style.display = "block";
+                p_check.style.display = "none";
+                return false;
+            } else {
+                pass.style.border = "2px solid green";
+                p_times.style.display = "none";
+                p_check.style.display = "block";
+            }
+        });
+
+        validate = () => {
+            //const error = document.querySelector('#error')
+            if (pass.value.length == 0 || pass.value.length < 6) {
+                document.getElementById('error').innerHTML ="Incorrect Password boss";
+                return false;
+            }
+            else if (user.value.length == 0 || user.value.length < 6) {
+                document.getElementById('error').innerHTML ="Incorrect Username boss";
+                return false;
+            }
+            else{
+                alert('Successful Login');
+            }
+            
+        }
+   </script>
+</body>
+</html>
