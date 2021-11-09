@@ -7,13 +7,7 @@
 }
 
 /* SPECIAL CASE */
-.circle.active {
-  clip-path: circle(410px at 450px 400px);
-  z-index: 2;
-}
-.thumbs.active {
-  z-index: 56;
-}
+
 .menuOpen.active :first-child {
   transform: rotate(90deg);
   background-color: #fff;
@@ -121,6 +115,7 @@ span {
   cursor: pointer;
   height: 150px;
 }
+
 .thumbs img {
   width: 20px;
   height: 20px;
@@ -302,6 +297,10 @@ span {
   .circle {
     clip-path: circle(470px at right 700px);
   }
+  .circle.active {
+    clip-path: circle(410px at 450px 400px);
+    z-index: 2;
+  }
   .ul.active {
     position: absolute;
     display: grid;
@@ -316,5 +315,15 @@ span {
     top: 250px;
     z-index: 56;
     color: #fff;
+  }
+  .thumbs.active {
+  z-index: 56;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 43%;
+  right: 150px;
+  cursor: pointer;
+  height: 150px;
   }
 }
