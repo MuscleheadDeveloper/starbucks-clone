@@ -17,6 +17,11 @@
           <li><a href="#">What's Good</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+        <div class="menuOpen" onclick="mobile()">
+          <span class="span1"></span>
+          <span class="span1"></span>
+          <span class="span1"></span>
+        </div>
       </header>
 
       <div class="content">
@@ -39,7 +44,7 @@
       </div>
 
       <div class="menu">
-        <ul>
+        <ul class="menuList">
           <li>
             <img
               src="./img/thumb1.png"
@@ -78,6 +83,17 @@
         circle.style.background = color;
         btn.style.background = color;
       };
+      function mobile(){
+        const menu = document.querySelector('.menu');
+        const thumbs = document.querySelector('.thumbs');
+        const menuOpen = document.querySelector('.menuOpen');
+        menuOpen.classList.toggle('active');
+        thumbs.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.querySelector('.circle').classList.toggle('active')
+        document.querySelector('.ul').classList.toggle('active');
+
+      }
     </script>
   </body>
 </html>
