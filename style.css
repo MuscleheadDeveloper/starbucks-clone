@@ -28,21 +28,6 @@
 .menuOpen.active :last-child {
   opacity: 0;
 }
-.ul.active {
-  position: absolute;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-rows: repeat(4, 80px);
-  place-items: center;
-}
-.ul.active li a {
-  transition: 1.5s ease all;
-  position: relative;
-  left: 120px;
-  top: 250px;
-  z-index: 56;
-  color: #fff;
-}
 
 /* SPECIAL CASE */
 body {
@@ -316,5 +301,20 @@ span {
 
   .circle {
     clip-path: circle(470px at right 700px);
+  }
+  .ul.active {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-rows: repeat(4, 80px);
+    place-items: center;
+  }
+  .ul.active li a {
+    transition: 1.5s ease all;
+    position: relative;
+    left: 120px;
+    top: 250px;
+    z-index: 56;
+    color: #fff;
   }
 }
