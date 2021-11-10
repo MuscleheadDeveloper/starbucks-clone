@@ -251,13 +251,6 @@ span {
   }
   .thumbs.active{
     z-index: 56;
-    display: grid;
-    place-items: center;
-    position: fixed;
-    bottom: 43%;
-    right: 150px;
-    cursor: pointer;
-    height: 150px;
   }
   .ul.active li a {
     transition: 1.5s ease all;
