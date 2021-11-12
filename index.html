@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
+    <section class="section">
       <div class="circle"></div>
       <header>
         <a href="#" class="logo"><img src="logo.png" alt="" /></a>
@@ -85,10 +85,12 @@
       };
       function mobile() {
         const menu = document.querySelector(".menu");
+        const section = document.querySelector(".section");
         const thumbs = document.querySelector(".thumbs");
         const menuOpen = document.querySelector(".menuOpen");
         menuOpen.classList.toggle("active");
         thumbs.classList.toggle("active");
+        section.classList.toggle("active");
         menu.classList.toggle("active");
         document.querySelector(".circle").classList.toggle("active");
         document.querySelector(".ul").classList.toggle("active");
