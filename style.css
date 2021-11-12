@@ -264,7 +264,7 @@ span {
 }
 @media (max-width: 440px) {
   section {
-    height: 100vh;
+    max-height: 100vh;
     width: 100%;
   }
   .btn {
